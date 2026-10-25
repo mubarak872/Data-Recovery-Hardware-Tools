@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(BegateDriveLabBridge LANGUAGES CXX)
+add_library(begate_drive_bridge SHARED src/bridge.cpp)
+target_include_directories(begate_drive_bridge PUBLIC include)
+target_compile_features(begate_drive_bridge PRIVATE cxx_std_17)
+target_compile_definitions(begate_drive_bridge PRIVATE BEGATE_BRIDGE_EXPORTS)
