@@ -50,6 +50,14 @@ export type FamilyProfile = {
 
 export type BackendMode = "simulation" | "native-sdk";
 
+export type HardwarePort = {
+  id: string;
+  label: string;
+  transport: "SATA" | "PATA" | "USB" | "Unknown";
+  available: boolean;
+  detail: string;
+};
+
 export type BackendStatus = {
   mode: BackendMode;
   connected: boolean;
@@ -63,6 +71,7 @@ export type OperationResult<T> =
 
 export interface DriveLabBackend {
   getStatus(): Promise<BackendStatus>;
+  listPorts(): Promise<OperationResult<HardwarePort[]>>;
   listDevices(): Promise<OperationResult<DeviceInfo[]>>;
   listFamilyProfiles(): Promise<FamilyProfile[]>;
   identifyDevice(deviceId: string): Promise<OperationResult<DeviceInfo>>;
