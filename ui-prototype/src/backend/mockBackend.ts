@@ -1,5 +1,5 @@
 import { familyProfiles } from "./capabilities";
-import type { BackendStatus, DeviceInfo, DriveLabBackend, OperationResult } from "./types";
+import type { BackendStatus, DeviceInfo, DriveLabBackend, HardwarePort, OperationResult } from "./types";
 
 /**
  * Simulation backend only. It intentionally returns no physical devices and
@@ -11,6 +11,20 @@ export class MockDriveLabBackend implements DriveLabBackend {
       mode: "simulation",
       connected: false,
       message: "Simulation mode: no physical hardware is connected."
+    };
+  }
+
+  async listPorts(): Promise<OperationResult<HardwarePort[]>> {
+    return {
+      ok: true,
+      data: [
+        { id: "sata-0", label: "SATA 0", transport: "SATA", available: false, detail: "No vendor controller detected" },
+        { id: "sata-1", label: "SATA 1", transport: "SATA", available: false, detail: "No vendor controller detected" },
+        { id: "sata-2", label: "SATA 2", transport: "SATA", available: false, detail: "No vendor controller detected" },
+        { id: "sata-3", label: "SATA 3", transport: "SATA", available: false, detail: "No vendor controller detected" },
+        { id: "pata-0", label: "PATA 0", transport: "PATA", available: false, detail: "No vendor controller detected" }
+      ],
+      message: "Demo port list only. These are not physical controller ports."
     };
   }
 
