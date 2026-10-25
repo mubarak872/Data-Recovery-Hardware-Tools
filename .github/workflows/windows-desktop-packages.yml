@@ -1,0 +1,39 @@
+name: Windows Desktop Packages
+
+on:
+  push:
+    branches: [ui-prototype]
+    paths:
+      - "ui-prototype/**"
+      - ".github/workflows/windows-desktop-packages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package-windows:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: ui-prototype
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm install
+      - name: Build frontend
+        run: npm run build
+      - name: Package installer and portable app
+        run: npx electron-builder --win nsis portable
+      - name: Upload Windows packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: Begate-Drive-Lab-Windows
+          path: ui-prototype/release/*
+          if-no-files-found: error
+          retention-days: 30
