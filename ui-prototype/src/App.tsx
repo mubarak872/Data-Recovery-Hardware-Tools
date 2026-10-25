@@ -1,14 +1,14 @@
 import { useMemo, useState } from "react";
 import { Activity, AlertTriangle, ArrowRight, BadgeCheck, Cable, ChevronDown, ChevronRight, CircleHelp, Cpu, Database, Disc3, FileSearch, HardDrive, LayoutDashboard, Logs, MoreHorizontal, Plus, Search, Settings2, ShieldCheck, Usb } from "lucide-react";
 
-const profiles = [
- {vendor:"Seagate", utility:"F3 Architecture", name:"Barracuda F3", capabilities:["Identify drive","ROM information","Service-area modules","Terminal diagnostics"]},
- {vendor:"Western Digital", utility:"WD Marvell", name:"WD Marvell", capabilities:["Identify drive","ROM information","Service-area modules"]},
- {vendor:"Western Digital", utility:"WD ROYL", name:"ROYL family", capabilities:["Identify drive","ROM information"]},
- {vendor:"Toshiba", utility:"Universal ATA", name:"Toshiba ATA", capabilities:["Identify drive","SMART status","Read sectors"]},
- {vendor:"HGST / Hitachi", utility:"Universal ATA", name:"HGST ATA", capabilities:["Identify drive","SMART status","Read sectors"]},
- {vendor:"Samsung", utility:"Universal ATA", name:"Samsung ATA", capabilities:["Identify drive","SMART status","Read sectors"]}
-];
+import { familyProfiles } from "./backend/capabilities";
+
+const profiles = familyProfiles.map(profile => ({
+ vendor: profile.vendor,
+ utility: profile.utility,
+ name: profile.name,
+ capabilities: profile.capabilities.map(capability => capability.label)
+}));
 const vendors=["All manufacturers","Seagate","Western Digital","Toshiba","HGST / Hitachi","Samsung"];
 const navItems=[["Overview",LayoutDashboard],["Device manager",HardDrive],["Family explorer",Cpu],["Data recovery",Database],["Firmware lab",Settings2],["Command log",Logs],["Settings",Settings2]] as const;
 
