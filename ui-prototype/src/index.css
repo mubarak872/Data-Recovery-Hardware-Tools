@@ -24,3 +24,44 @@
 .report-warning{display:flex;align-items:center;gap:7px;color:#e1b86c;font-size:9px;margin:15px 0}
 .report-preview .btn{margin-top:4px}
 @media(max-width:900px){.report-grid{grid-template-columns:1fr}}
+
+
+/* Begate Drive Lab — professional light theme with orange actions */
+:root{font-family:'DM Sans',Arial,sans-serif;color:#202938;background:#f5f7fa;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+body{background:#f5f7fa;color:#202938}
+.shell{background:#f5f7fa;color:#202938}
+.sidebar{background:#fff;border-right:1px solid #e4e7ec;box-shadow:2px 0 12px #18223008}
+.brand-icon{background:linear-gradient(145deg,#ff8a32,#ed5a16);box-shadow:0 4px 10px #f9731626}
+.brand b{color:#202938}.brand b span{color:#f26a21}.brand small{color:#7b8492}
+.connection{background:#fff7f1;border-color:#fed7aa}.connection b{color:#202938}.connection small{color:#727b88}.connection>span{background:#ffeddc;color:#b84b10}
+.connection>i{background:#f97316;box-shadow:0 0 0 4px #f973161c}
+.nav-label{color:#8b93a1}.nav-item{color:#596273}.nav-item:hover{background:#fff3e9;color:#b94b12}.nav-item.active{color:#b84b10;background:#fff0e5;box-shadow:inset 3px 0 #f97316}.nav-item.active svg{color:#e96318}
+.support{border-color:#fed7aa;background:#fff8f2;color:#e96318}.support b{color:#293241}.support p{color:#667085}.support button{color:#d95713}
+.user{border-color:#e6e9ef}.user b{color:#293241}.user small{color:#7b8492}.user>div,.user-badge{background:#ffeadb;color:#c44f11}
+.topbar{background:#fff;border-bottom:1px solid #e4e7ec}.crumb{color:#737d8c}.crumb b{color:#202938}.safe{color:#16734c;background:#eaf8f0;border-color:#b8e5cb}.icon-button{background:#fff;border-color:#dfe3e9;color:#667085}
+.content{padding:30px 32px 20px}.eyebrow{color:#7b8492}.eyebrow i{background:#f97316}
+.page-head h1{color:#202938}.page-head p{color:#667085}
+.btn{border-radius:8px;font-size:12px;padding:10px 14px}.primary{color:#fff;background:#f97316;border-color:#ea650d;box-shadow:0 2px 4px #f9731620}.primary:hover{background:#e9630d}.secondary{color:#344054;background:#fff;border-color:#d8dee7}.secondary:hover{background:#f8fafc;border-color:#c5ccd6}
+.metrics{gap:16px}.metric,.panel{background:#fff;border:1px solid #e4e7ec;border-radius:12px;box-shadow:0 2px 8px #18223005}.metric{padding:18px}.metric>div:first-child{color:#596273}.metric-icon,.metric-icon.violet,.metric-icon.cyan,.metric-icon.green{background:#fff0e5;color:#e96318}.metric strong{color:#202938}.metric strong small{color:#667085}.metric>small{color:#667085}
+.panel{padding:20px}.panel-head h2,.detail h2{color:#202938}.panel-head p{color:#667085}.link-button{color:#d95713}
+.empty-icon{border-color:#fed7aa;background:#fff4eb;color:#e96318}.empty-icon svg+svg{background:#eaf8f0;color:#168454}.empty h3{color:#202938}.empty p{color:#667085}
+.profile-row{border-color:#edf0f4;color:#667085}.profile-row b{color:#293241}.profile-row small{color:#667085}.profile-row>svg{color:#98a2b3}.profile-icon{background:#fff3e9;border-color:#fed7aa;color:#e96318}
+.pill{background:#f2f4f7;color:#667085}.pill.blue{background:#fff0e5;color:#c44f11}.pill.green{background:#eaf8f0;color:#16734c}
+.event{border-color:#edf0f4}.event>span{background:#fff0e5;color:#e96318}.event b{color:#344054}.event small{color:#7b8492}
+.search{background:#fff;border-color:#d8dee7;color:#667085}.search input{color:#202938}.search input::placeholder{color:#98a2b3}.field-label{color:#667085}
+.select{background:#fff;border-color:#d8dee7;color:#667085}.select select{color:#344054}.select option{background:#fff;color:#202938}
+.profile-option{color:#667085}.profile-option:hover{background:#f8fafc}.profile-option.chosen{background:#fff4eb;border-color:#fdba8c}.profile-option b{color:#293241}.profile-option small{color:#667085}.profile-option em{color:#7b8492}.profile-option>svg{color:#98a2b3}
+.browser-foot{border-color:#edf0f4;color:#667085}.browser-foot span{color:#475467}
+.detail-head{border-color:#edf0f4}.detail-disk{background:#fff0e5;border-color:#fed7aa;color:#e96318}.detail-head p{color:#667085}
+.status-card{background:#fffbeb;border-color:#fde68a}.status-card b{color:#344054}.status-card small{color:#667085}
+.capability{border-color:#edf0f4;color:#475467}.capability>svg{color:#e96318}
+.warning{background:#fff8eb;border-color:#f6d79a;color:#b54708}.warning p{color:#7a4b12}.warning b{color:#92400e}
+.sector-map{background:#f8fafc;border-color:#e4e7ec}.sector-map span{background:#34a583}.sector-map span:nth-child(3n){background:#5ab99c}.sector-map span.bad{background:#e5a04b}.sector-map span.dim{background:#d0d5dd}.map-head{color:#344054}.map-head small,.map-foot{color:#667085}
+.placeholder>h2{color:#202938}.placeholder>p{color:#667085}.placeholder-cards>div{background:#fff8f2;border-color:#fed7aa;color:#e96318}.placeholder-cards b{color:#344054}.placeholder-cards small{color:#667085}
+.log-row{border-color:#edf0f4;color:#475467}.log-row code,.log-row small{color:#667085}.log-row b{color:#344054}
+.setting-row{border-color:#edf0f4}.setting-row b{color:#344054}.setting-row small{color:#667085}
+footer{color:#7b8492}
+.device-manager .port-option,.port-option{background:#fff;border-color:#e4e7ec;color:#475467}.port-option:hover,.port-option.port-selected{background:#fff4eb;border-color:#fdba8c}.port-option b{color:#344054}.port-option small{color:#667085}.port-icon{background:#fff0e5;color:#e96318}.port-details p,.device-notice{color:#667085}.notice-line{background:#f8fafc;border-color:#e4e7ec;color:#475467}.drive-table{border-color:#e4e7ec}.drive-table-row{border-color:#edf0f4;color:#475467}.drive-table-head{background:#f8fafc;color:#667085}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #fdba8c;outline-offset:2px}
+@media(max-width:1100px){.sidebar{width:215px;flex-basis:215px}.content{padding:24px 20px}.topbar{padding:0 20px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.explorer{grid-template-columns:1fr}}
+@media(max-width:760px){.shell{display:block}.sidebar{width:100%;min-height:auto;padding:12px}.brand{padding-bottom:12px}.connection,.sidebar-bottom,.nav-label.extra{display:none}.sidebar .nav-label{padding-top:8px}.sidebar{display:block}.nav-item{display:inline-flex;width:auto;margin:2px;padding:9px}.topbar{padding:0 14px}.content{padding:18px 12px}.page-head{align-items:flex-start;flex-direction:column}.head-actions{flex-wrap:wrap}.metrics,.lower-grid,.placeholder-cards{grid-template-columns:1fr}.top-right .safe{display:none}.panel{padding:15px}.sector-map{grid-template-columns:repeat(12,minmax(0,1fr));padding:10px}}
